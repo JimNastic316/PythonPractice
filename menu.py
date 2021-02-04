@@ -2,8 +2,10 @@
 # Github: https://github.com/JimNastic316
 # Date:   2/4/2021
 # Description: generic Python menu
+from catalog_functions import enter_band, enter_album, enter_song
 
-menu_choices = "12"
+
+menu_choices = "123"
 choice = "-"     # initialize variable choice
 
 while choice != "0":
@@ -11,10 +13,21 @@ while choice != "0":
         print(f"{choice} is a valid choice")
     else:
         print("Please select an option from below, or 0 to quit")
-        print("\t1 - Enter an album title\n"
-              "\t2 - Enter a song title\n"
+        print("\t1 - Enter band name\n"
+              "\t2 - Enter an album title\n"
+              "\t3 - Enter a song title\n"
               "\t0 - Quit")
     choice = input("Enter you selection: ")
+    if choice == "1":
+        band = enter_band()
+        print(f"Band entered: {band}")
+    elif choice == "2":
+        album = enter_album()
+        print(f"Album entered: {album}")
+    elif choice == "3":
+        song = enter_song()
+        print(f"Song entered: {song}")
+
 print("Goodbye")
 
 # selection = "-"
