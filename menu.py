@@ -5,13 +5,13 @@
 from catalog_functions import enter_band, enter_album, enter_song
 
 
-menu_choices = "123"
+menu_choices = "-123"
 choice = "-"     # initialize variable choice
 
 while choice != "0":
     if choice in menu_choices:
-        print(f"{choice} is a valid choice")
-    else:
+    #     print(f"{choice} is a valid choice")
+    # else:
         print("Please select an option from below, or 0 to quit")
         print("\t1 - Enter band name\n"
               "\t2 - Enter an album title\n"
